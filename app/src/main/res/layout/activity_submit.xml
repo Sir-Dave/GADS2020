@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.SubmitActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/apppbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+                    android:layout_height="?attr/actionBarSize"/>
+
+            <ImageView
+                    android:id="@+id/icon_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/gads_header"
+                    android:layout_toEndOf="@+id/toolbar"
+                    android:minHeight="?actionBarSize"/>
+
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_project_submission"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/firstName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/apppbar"
+            android:hint="First Name"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/lastName"
+            android:hint="Last Name"
+            app:layout_constraintStart_toEndOf="@id/firstName"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toBottomOf="@id/apppbar"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/emailAddress"
+            android:hint="Email Address"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/firstName"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/project_link"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailAddress"
+            android:layout_marginTop="10dp"
+            android:hint="Project on GITHUB (link)"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submit_project"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@id/project_link"
+            android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

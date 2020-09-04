@@ -23,7 +23,7 @@
 
             <ImageView
                     android:layout_width="50dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:scaleType="center"
                     android:id="@+id/learner_image"
                     android:src="@mipmap/ic_launcher"
@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="300 skill IQ score,"
-                    android:textStyle="bold"
+                    android:textColor="#000"
                     android:id="@+id/learning_hours"
                     android:layout_marginStart="8dp"
                     android:layout_marginBottom="4dp"
@@ -64,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nigeria"
-                    android:textStyle="bold"
+                    android:textColor="#000"
                     android:id="@+id/country"
                     android:layout_marginStart="4dp"
                     android:layout_marginBottom="4dp"

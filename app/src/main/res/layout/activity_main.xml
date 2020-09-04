@@ -4,11 +4,15 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
         android:layout_height="match_parent"
         tools:context=".activities.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_height="wrap_content"
+            android:id="@+id/apppbar"
+            android:background="@drawable/background"
+            android:fitsSystemWindows="true"
             android:layout_width="match_parent"
             android:theme="@style/AppTheme.AppBarOverlay">
 
@@ -25,18 +29,20 @@
                     android:minHeight="?actionBarSize"
                     android:padding="@dimen/appbar_padding"
                     android:textColor="@color/colorWhite"
-                    android:text="LEADERBOARD"
+                    android:text="@string/txt_leaderboard"
                     android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
             <Button
                     android:layout_width="wrap_content"
-                    android:text="Submit"
+                    android:text="@string/txt_submit"
+                    android:id="@+id/btn_submit"
                     android:layout_toEndOf="@id/title"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginStart="70dp"
+                    android:textColor="#000"
                     android:background="@drawable/rounded_button"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="20dp"/>
 
         </RelativeLayout>
 

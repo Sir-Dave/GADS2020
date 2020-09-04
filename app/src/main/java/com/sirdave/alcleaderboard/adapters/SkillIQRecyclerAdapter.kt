@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.sirdave.alcleaderboard.R
 import com.sirdave.alcleaderboard.models.Skills
 
@@ -33,8 +34,7 @@ class SkillIQRecyclerAdapter(context: Context, skills: ArrayList<Skills>): Recyc
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val user = mSkills[position]
 
-        // Use Glide to load this
-        // holder.image
+        Glide.with(mContext).load(user.badgeUrl).into(holder.image)
         holder.name.text = user.name
         holder.country.text = user.country
         holder.skill_score.text = user.score
