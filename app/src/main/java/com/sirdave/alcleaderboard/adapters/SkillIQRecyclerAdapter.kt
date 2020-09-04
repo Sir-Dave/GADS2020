@@ -37,7 +37,7 @@ class SkillIQRecyclerAdapter(context: Context, skills: ArrayList<Skills>): Recyc
         Glide.with(mContext).load(user.badgeUrl).into(holder.image)
         holder.name.text = user.name
         holder.country.text = user.country
-        holder.skill_score.text = user.score
+        holder.skill_score.text = mContext.resources.getString(R.string.txt_skillIQ_score, user.score)
     }
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){

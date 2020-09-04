@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             card_view:cardCornerRadius="4dp"
             card_view:cardMaxElevation="2dp"
             card_view:cardElevation="1dp"
@@ -38,8 +38,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/userName"
-                    android:text="Adamu Adamu"
                     android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
                     android:layout_marginTop="5dp"
                     android:layout_marginStart="8dp"
                     card_view:layout_constraintStart_toEndOf="@+id/learner_image"
@@ -51,7 +52,6 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="300 skill IQ score,"
                     android:textColor="#000"
                     android:id="@+id/learning_hours"
                     android:layout_marginStart="8dp"
@@ -63,11 +63,9 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nigeria"
                     android:textColor="#000"
                     android:id="@+id/country"
                     android:layout_marginStart="4dp"
-                    android:layout_marginBottom="4dp"
                     card_view:layout_constraintBottom_toBottomOf="parent"
                     card_view:layout_constraintTop_toBottomOf="@+id/userName"
                     card_view:layout_constraintStart_toEndOf="@+id/learning_hours"/>

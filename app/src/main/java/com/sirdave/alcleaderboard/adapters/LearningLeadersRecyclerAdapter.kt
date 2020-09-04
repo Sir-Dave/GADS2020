@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sirdave.alcleaderboard.R
@@ -39,7 +40,7 @@ class LearningLeadersRecyclerAdapter(context: Context, learners: ArrayList<Learn
         Glide.with(mContext).load(user.badgeUrl).into(holder.image)
         holder.name.text = user.name
         holder.country.text = user.country
-        holder.hours.text = user.hours
+        holder.hours.text = mContext.resources.getString(R.string.txt_learning_hours, user.hours)
 
 
     }

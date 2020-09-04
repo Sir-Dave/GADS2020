@@ -9,10 +9,10 @@
         tools:context=".activities.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-            android:layout_height="wrap_content"
             android:id="@+id/apppbar"
-            android:background="@drawable/background"
             android:fitsSystemWindows="true"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/background"
             android:layout_width="match_parent"
             android:theme="@style/AppTheme.AppBarOverlay">
 
@@ -50,8 +50,7 @@
         <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/colorPrimary"/>
+                android:layout_height="wrap_content"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

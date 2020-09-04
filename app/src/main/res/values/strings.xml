@@ -8,4 +8,6 @@
     <string name="txt_project_submission">Project Submission</string>
     <string name="txt_submit">Submit</string>
     <string name="txt_leaderboard">LEADERBOARD</string>
+    <string name="txt_learning_hours">%1$s learning hours,</string>
+    <string name="txt_skillIQ_score">%1$s skill IQ score,</string>
 </resources>

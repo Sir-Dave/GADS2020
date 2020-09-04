@@ -5,12 +5,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/background"
         tools:context=".activities.SubmitActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-            android:layout_height="wrap_content"
+            android:layout_height="?attr/actionBarSize"
             android:layout_width="match_parent"
-            android:id="@+id/apppbar"
+            android:id="@+id/appbar"
+            android:fitsSystemWindows="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,65 +31,103 @@
 
             <ImageView
                     android:id="@+id/icon_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
                     android:gravity="center"
                     android:src="@drawable/gads_header"
                     android:layout_toEndOf="@+id/toolbar"
-                    android:minHeight="?actionBarSize"/>
+                    android:maxHeight="?actionBarSize"/>
 
         </RelativeLayout>
 
-        <TextView
-                android:id="@+id/text_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_project_submission"/>
-
     </com.google.android.material.appbar.AppBarLayout>
 
-    <EditText
+    <TextView
+            android:id="@+id/text_title"
             android:layout_width="wrap_content"
-            android:id="@+id/firstName"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorYellow"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/apppbar"
-            android:hint="First Name"
-            android:layout_height="wrap_content"/>
+            android:text="@string/txt_project_submission" android:layout_marginTop="4dp"/>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/relLayout"
+            app:layout_constraintTop_toBottomOf="@id/text_title"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:id="@+id/firstName"
+                android:width="150dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/text_input_border"
+                android:hint="First Name"
+                android:layout_height="40dp"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:id="@+id/lastName"
+                android:hint="Last Name"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:width="180dp"
+                android:background="@drawable/text_input_border"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toEndOf="@+id/firstName"
+                android:layout_height="40dp"/>
+
+    </RelativeLayout>
 
     <EditText
-            android:layout_width="wrap_content"
-            android:id="@+id/lastName"
-            android:hint="Last Name"
-            app:layout_constraintStart_toEndOf="@id/firstName"
-            android:layout_marginStart="10dp"
-            app:layout_constraintTop_toBottomOf="@id/apppbar"
-            android:layout_height="wrap_content"/>
-
-    <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:id="@+id/emailAddress"
+            android:layout_marginStart="16dp"
             android:hint="Email Address"
+            android:background="@drawable/text_input_border"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/firstName"
-            android:layout_height="wrap_content"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/relLayout"
+            android:layout_height="40dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"/>
 
     <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:id="@+id/project_link"
             app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="@drawable/text_input_border"
             app:layout_constraintTop_toBottomOf="@id/emailAddress"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:hint="Project on GITHUB (link)"
-            android:layout_height="wrap_content"/>
+            android:layout_height="40dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"/>
 
     <Button
             android:layout_width="wrap_content"
             android:text="Submit"
             android:id="@+id/submit_project"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/yellow_rounded_button"
             app:layout_constraintTop_toBottomOf="@id/project_link"
-            android:layout_height="wrap_content"/>
+            android:layout_height="40dp" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

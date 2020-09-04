@@ -13,7 +13,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.SubmitActivity">
+        <activity
+                android:name=".activities.SubmitActivity">
         </activity>
         <activity
                 android:name=".activities.MainActivity"
