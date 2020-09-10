@@ -10,4 +10,13 @@
     <string name="txt_leaderboard">LEADERBOARD</string>
     <string name="txt_learning_hours">%1$s learning hours,</string>
     <string name="txt_skillIQ_score">%1$s skill IQ score,</string>
+    <string name="submission_failure">Submission not successful</string>
+    <string name="submission_success">Submission successful</string>
+    <string name="txt_yes">Yes</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="submit">Submit</string>
+    <string name="project_on_github_link">Project on GITHUB (link)</string>
+    <string name="email_address">Email Address</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
 </resources>

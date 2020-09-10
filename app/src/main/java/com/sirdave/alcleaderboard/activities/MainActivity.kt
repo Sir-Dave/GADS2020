@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setAppBarHeight() {
-        val appBarLayout: AppBarLayout = findViewById(R.id.apppbar)
+        val appBarLayout: AppBarLayout = findViewById(R.id.appbar)
         appBarLayout.layoutParams = CoordinatorLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
             getStatusBarHeight() + dpToPx(48 + 56)

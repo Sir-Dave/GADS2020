@@ -9,7 +9,7 @@
         tools:context=".activities.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/apppbar"
+            android:id="@+id/appbar"
             android:fitsSystemWindows="true"
             android:layout_height="?attr/actionBarSize"
             android:background="@drawable/background"
