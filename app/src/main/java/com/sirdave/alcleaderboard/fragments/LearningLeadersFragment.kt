@@ -12,12 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.sirdave.alcleaderboard.R
 import com.sirdave.alcleaderboard.adapters.LearningLeadersRecyclerAdapter
-import com.sirdave.alcleaderboard.adapters.SkillIQRecyclerAdapter
-import com.sirdave.alcleaderboard.core.LearnerServices
+import com.sirdave.alcleaderboard.core.APIServices
 import com.sirdave.alcleaderboard.core.ServiceBuilder
-import com.sirdave.alcleaderboard.core.SkillServices
 import com.sirdave.alcleaderboard.models.Learners
-import com.sirdave.alcleaderboard.models.Skills
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -34,7 +31,7 @@ class LearningLeadersFragment : Fragment() {
         recyclerView = view.findViewById(R.id.learners_recycler_view)
         layoutManager = LinearLayoutManager(context!!, RecyclerView.VERTICAL, false)
 
-        val learnerServices = ServiceBuilder().buildService(LearnerServices::class.java)
+        val learnerServices = ServiceBuilder().buildService(APIServices::class.java)
         val learnersRequest = learnerServices.getLearners()
 
         learnersRequest.enqueue(object: Callback<ArrayList<Learners>> {

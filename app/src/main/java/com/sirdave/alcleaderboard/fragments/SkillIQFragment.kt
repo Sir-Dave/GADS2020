@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.sirdave.alcleaderboard.R
 import com.sirdave.alcleaderboard.adapters.SkillIQRecyclerAdapter
+import com.sirdave.alcleaderboard.core.APIServices
 import com.sirdave.alcleaderboard.core.ServiceBuilder
-import com.sirdave.alcleaderboard.core.SkillServices
 import com.sirdave.alcleaderboard.models.Skills
 import retrofit2.Call
 import retrofit2.Callback
@@ -29,7 +29,7 @@ class SkillIQFragment : Fragment() {
         recyclerView = view.findViewById(R.id.skill_recycler_view)
         layoutManager = LinearLayoutManager(context!!, RecyclerView.VERTICAL, false)
 
-        val skillServices = ServiceBuilder().buildService(SkillServices::class.java)
+        val skillServices = ServiceBuilder().buildService(APIServices::class.java)
         val skillRequest = skillServices.getSkills()
 
         skillRequest.enqueue(object: Callback<ArrayList<Skills>>{
