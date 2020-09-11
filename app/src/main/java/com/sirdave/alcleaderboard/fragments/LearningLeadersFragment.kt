@@ -31,8 +31,8 @@ class LearningLeadersFragment : Fragment() {
         recyclerView = view.findViewById(R.id.learners_recycler_view)
         layoutManager = LinearLayoutManager(context!!, RecyclerView.VERTICAL, false)
 
-        val learnerServices = ServiceBuilder().buildService(APIServices::class.java)
-        val learnersRequest = learnerServices.getLearners()
+        val apiServices = ServiceBuilder().buildService(APIServices::class.java)
+        val learnersRequest = apiServices.getLearners()
 
         learnersRequest.enqueue(object: Callback<ArrayList<Learners>> {
             override fun onFailure(request: Call<ArrayList<Learners>>, t: Throwable) {

@@ -13,6 +13,7 @@ import com.sirdave.alcleaderboard.R
 import com.sirdave.alcleaderboard.adapters.ViewPagerAdapter
 import com.sirdave.alcleaderboard.fragments.LearningLeadersFragment
 import com.sirdave.alcleaderboard.fragments.SkillIQFragment
+import kotlin.math.roundToInt
 
 
 class MainActivity : AppCompatActivity() {
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         val density = resources
             .displayMetrics
             .density
-        return Math.round(dp.toFloat() * density)
+        return (dp.toFloat() * density).roundToInt()
     }
 
     private fun setAdapters() {

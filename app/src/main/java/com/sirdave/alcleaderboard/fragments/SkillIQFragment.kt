@@ -29,8 +29,8 @@ class SkillIQFragment : Fragment() {
         recyclerView = view.findViewById(R.id.skill_recycler_view)
         layoutManager = LinearLayoutManager(context!!, RecyclerView.VERTICAL, false)
 
-        val skillServices = ServiceBuilder().buildService(APIServices::class.java)
-        val skillRequest = skillServices.getSkills()
+        val apiServices = ServiceBuilder().buildService(APIServices::class.java)
+        val skillRequest = apiServices.getSkills()
 
         skillRequest.enqueue(object: Callback<ArrayList<Skills>>{
             override fun onFailure(request: Call<ArrayList<Skills>>, t: Throwable) {
